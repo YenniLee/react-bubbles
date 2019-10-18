@@ -18,7 +18,7 @@ const Login = props => {
     axiosWithAuth()
       .post('/login', userCredentials)
       .then(res => {
-        localStorage.setItem('tokoen', res.data.payload)
+        localStorage.setItem('token', res.data.payload)
         props.history.push('/bubblepage')
       })
       .catch(err => console.log('post request login error', err))
